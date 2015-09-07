@@ -1,0 +1,17 @@
+db:
+    image: mysql:5.7
+    restart: always
+    ports:
+        - "3306:3306"
+    env_file:
+        - db.env
+ldaplog:
+    build: ./ldaplog
+    restart: always
+    command: env python ldaplog/manage.py tornado -p 8000 
+    links: 
+        - db
+    ports:
+        - "8000:8000"
+    env_file:
+        - ./ldaplog.env
