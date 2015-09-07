@@ -1,0 +1,5 @@
+[submodule "ldaplog"]
+	path = ldaplog
+	url = https://github.com/eea/ldaplog.git
+[submodule "ldaplog"]
+        branch = docker
