@@ -1,5 +1,5 @@
 db:
-    image: mysql:5.7
+    build: ./mysql_rsyslog
     restart: always
     ports:
         - "3306:3306"
