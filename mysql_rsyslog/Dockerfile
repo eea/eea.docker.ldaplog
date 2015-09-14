@@ -12,7 +12,7 @@ RUN DEBIAN_FRONTEND=noninteractive /usr/bin/apt-get -y install rsyslog-mysql
 #Copy rsyslog files
 
 COPY createDB.sql ./createDB.sql
-COPY rsyslog.conf /etc/rsyslog.conf
+COPY rsyslog.conf /rsyslog.conf
 COPY run.sh ./run.sh
 
 VOLUME /var/lib/mysql2
